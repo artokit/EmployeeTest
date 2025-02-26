@@ -16,20 +16,20 @@ public class EmployeeController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddEmployee(CreateEmployeeRequest createEmployeeRequest)
+    public async Task<IActionResult> Add(CreateEmployeeRequest createEmployeeRequest)
     {
         return Ok(await _employeeService.CreateAsync(createEmployeeRequest));
     }
     
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteEmployee(int id)
+    public async Task<IActionResult> Delete(int id)
     {
         await _employeeService.DeleteAsync(id);
         return NoContent();
     }
 
     [HttpPatch("{id}")]
-    public async Task<IActionResult> UpdateEmployee(int id, UpdateEmployeeRequest updateEmployeeRequest)
+    public async Task<IActionResult> Update(int id, UpdateEmployeeRequest updateEmployeeRequest)
     {
         return Ok(await _employeeService.UpdateAsync(updateEmployeeRequest, id));
     }
