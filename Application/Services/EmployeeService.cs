@@ -84,16 +84,16 @@ public class EmployeeService : IEmployeeService
         var dbEmployee = await _employeesRepository.GetByIdAsync(id);
         var dbPassport = await _passportsRepository.GetByEmployeeId(id);
 
-        if (updateEmployeeRequest.Phone is not null && await _employeesRepository.GetByPhoneAsync(updateEmployeeRequest.Phone) is not null)
-        {
-            throw new EmployeePhoneIsExist();
-        }
-        
         if (dbEmployee is null)
         {
             throw new EmployeeNotFound();
         }
-
+        
+        if (updateEmployeeRequest.Phone is not null && await _employeesRepository.GetByPhoneAsync(updateEmployeeRequest.Phone) is not null && !string.Equals(updateEmployeeRequest.Phone, dbEmployee.Phone))
+        {
+            throw new EmployeePhoneIsExist();
+        }
+        
         if (dbPassport is null)
         {
             throw new PassportNotFound();
