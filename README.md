@@ -21,4 +21,4 @@
 1. Перейдите в корневую папку проекта.
 2. Выполните команду:
    ```sh
-   docker-compose -f docker-compose-prod.yml up --build -d
+   docker compose -f docker-compose-prod.yml up --build -d
