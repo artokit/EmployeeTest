@@ -11,5 +11,5 @@ public interface IDepartmentService
     public Task<List<GetDepartmentResponse>> GetAllAsync();
     public Task<GetDepartmentResponse> GetByIdAsync(int id);
     public Task DeleteAsync(int id);
-    public Task<List<GetEmployeeWithPassport>> GetEmployeesAsync(int id);
+    public Task<List<GetEmployeeWithPassportResponse>> GetEmployeesAsync(int id);
 }

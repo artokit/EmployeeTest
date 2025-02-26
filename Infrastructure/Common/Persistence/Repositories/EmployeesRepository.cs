@@ -3,7 +3,6 @@ using Domain.Postgres;
 using Generic.Common.Interfaces;
 using Generic.Dapper;
 using Infrastructure.Common.Persistence.Scripts.Employees;
-using Infrastructure.Common.Persistence.Scripts.Passports;
 
 namespace Infrastructure.Common.Persistence.Repositories;
 

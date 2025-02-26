@@ -68,7 +68,7 @@ public class DepartmentService : IDepartmentService
         await _departmentRepository.DeleteAsync(id);
     }
 
-    public async Task<List<GetEmployeeWithPassport>> GetEmployeesAsync(int id)
+    public async Task<List<GetEmployeeWithPassportResponse>> GetEmployeesAsync(int id)
     {
         if (await _departmentRepository.GetByIdAsync(id) is null)
         {
@@ -76,6 +76,6 @@ public class DepartmentService : IDepartmentService
         }
         
         var res = await _departmentRepository.GetEmployeesAsync(id);
-        return res.Select(e => e.Adapt<GetEmployeeWithPassport>()).ToList();
+        return res.Select(e => e.Adapt<GetEmployeeWithPassportResponse>()).ToList();
     }
 }

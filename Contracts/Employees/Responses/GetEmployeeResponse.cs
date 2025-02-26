@@ -11,5 +11,5 @@ public class GetEmployeeResponse
     public string Phone { get; set; }
     public int CompanyId { get; set; }
     public GetPassportResponse Passport { get; set; }
-    public GetDepartmentResponse Department { get; set; }
+    public GetEmployeeDepartmentResponse Department { get; set; }
 }

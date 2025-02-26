@@ -121,7 +121,7 @@ public class EmployeeService : IEmployeeService
 
             var res = updatedDbEmployee.Adapt<GetEmployeeResponse>();
             res.Passport = updatedDbPassport.Adapt<GetPassportResponse>();
-            res.Department = dbDepartment.Adapt<GetDepartmentResponse>();
+            res.Department = dbDepartment.Adapt<GetEmployeeDepartmentResponse>();
             return res;
         }
         catch

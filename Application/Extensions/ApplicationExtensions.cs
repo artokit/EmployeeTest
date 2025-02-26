@@ -30,9 +30,9 @@ public static class ApplicationExtensions
             .Map(dest => dest.Passport,
                 src => new GetPassportResponse { Type = src.PassportType, Number = src.PassportNumber })
             .Map(dest => dest.Department,
-                src => new GetDepartmentResponse { Name = src.DepartmentName, Phone = src.DepartmentPhone });
+                src => new GetEmployeeDepartmentResponse { Name = src.DepartmentName, Phone = src.DepartmentPhone });
 
-        TypeAdapterConfig<DbEmployeeDetails, GetEmployeeWithPassport>.NewConfig()
+        TypeAdapterConfig<DbEmployeePassport, GetEmployeeWithPassportResponse>.NewConfig()
             .Map(dest => dest.Passport,
                 src => new GetPassportResponse { Type = src.PassportType, Number = src.PassportNumber });
 

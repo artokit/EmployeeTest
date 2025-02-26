@@ -2,7 +2,7 @@ using Contracts.Passports.Responses;
 
 namespace Contracts.Employees.Responses;
 
-public class GetEmployeeWithPassport
+public class GetEmployeeWithPassportResponse
 {
     public int Id { get; set; }
     public string Name { get; set; }

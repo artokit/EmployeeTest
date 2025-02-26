@@ -1,4 +1,3 @@
-using System.Xml.XPath;
 using Api.Middlewares;
 using Application.Extensions;
 using Generic.Extensions;
